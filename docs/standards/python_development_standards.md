@@ -1,5 +1,7 @@
 # 800.2 - Python Development Standards
 
+`version 01`
+
 This document defines practical development standards for 800.2 project (Professional Software Engineering assessment 2). It applies to application code, tests, configuration, documentation, and code review.
 
 The goals are readable code, clear responsibilities, reproducible environments, reliable behavior, and straightforward maintenance.
