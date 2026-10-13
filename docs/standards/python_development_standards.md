@@ -150,7 +150,7 @@ Decide explicitly whether database files belong in version control. Prefer initi
 ## 10. Git and Code Review
 
 - Keep the default branch runnable and releasable according to the project's release policy.
-- Develop changes on short-lived branches, such as `feature/booking-management`.
+- Develop changes on short-lived branches, such as `feature/booking-management`. `feature/` for feature development, `fix/` for bug fix, `test/` for testing, and `hotfix/` for fixing issues on a published version.
 - Keep commits focused and describe the change clearly.
 - Changes must be reviewed by another contributor before merging when the team has multiple contributors.
 - Do not commit conflict markers, temporary debugging code, or unexplained disabled checks.
