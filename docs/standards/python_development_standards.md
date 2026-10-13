@@ -1,6 +1,10 @@
 # 800.2 - Python Development Standards
 
-`version 01`
+| Version         | Date           | Type             | Who             | Comment                                 |
+| --------------- | -------------- | ---------------- | --------------- | --------------------------------------- |
+| 1.0             | 13 Oct 2026    | Creation         | Shuohui         | First version of development standards  |
+
+## 1. Introduction
 
 This document defines practical development standards for 800.2 project (Professional Software Engineering assessment 2). It applies to application code, tests, configuration, documentation, and code review.
 
@@ -152,8 +156,9 @@ Decide explicitly whether database files belong in version control. Prefer initi
 ## 10. Git and Code Review
 
 - Keep the default branch runnable and releasable according to the project's release policy.
-- Develop changes on short-lived branches, such as `feature/booking-management`. `feature/` for feature development, `fix/` for bug fix, `test/` for testing, and `hotfix/` for fixing issues on a published version.
+- Develop changes on short-lived branches, such as `feature/user_signup`. `feature/[VERSION]_dev` as a merging branch from all features of a version, `feature/[VERSION]_[USER_STORY]` for feature development, `fix/[VERSION]_[ISSUE_NUMBER]` for bug fix, `test/[VERSION]_[BRANCH_NAME]` for testing, and `hotfix/[VERSION]_[ISSUE_NUMBER]` for fixing issues on a published version.
+- All completed feature branch must be firstly mergecd into `feature/[VERSION]_dev` for testing and debuging phases. Once testing is completed, then merge it into `main` to deploy and publish.
 - Keep commits focused and describe the change clearly.
-- Changes must be reviewed by another contributor before merging when the team has multiple contributors.
+- Changes must be reviewed by another contributor before merging, normally the asignee will be the one who responds to the module.
 - Do not commit conflict markers, temporary debugging code, or unexplained disabled checks.
 - Update documentation when behavior, configuration, or setup changes.
