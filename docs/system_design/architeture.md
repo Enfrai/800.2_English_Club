@@ -5,16 +5,26 @@
 ```mermaid
 graph TD
     %% Styling and layout
-    Client([Web Application / Mobile Application]) -->|HTTPS| LoadBalancer[Load Balancer]
+
+    subgraph Client
+        %% direction LR
+
+        Web[Web Applicaiton]
+        Mobile[Mobile Application]
+    end
+
+    Client -->|HTTPS| LoadBalancer[Load Balancer]
 
     Client --> |HTTPS| CDN
-    
-    subgraph Cloud Infrastructure
-        CDN[CDN]
 
+    subgraph Entrance
         LoadBalancer --> APIGateway[API Gateway]
-        APIGateway --> ApplicationService[Application Services]
+        CDN[CDN]
+    end
+    
+    subgraph Services
         
+        APIGateway --> ApplicationService[Application Services]
         ApplicationService --> Model[Model]
 
 
