@@ -6,9 +6,11 @@
 graph TD
     %% Styling and layout
     Client([Web Application / Mobile Application]) -->|HTTPS| LoadBalancer[Load Balancer]
+
+    Client --> |HTTPS| CDN
     
     subgraph Cloud Infrastructure
-        LoadBalancer --> CDN[CDN]
+        CDN[CDN]
 
         LoadBalancer --> APIGateway[API Gateway]
         APIGateway --> ApplicationService[Application Services]
