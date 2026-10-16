@@ -33,7 +33,7 @@ graph TD
         AsyncProcessing --> Model
     end
 
-    subgraph Sotrage
+    subgraph Storage
         Model --> DB[(Primary Database)]
         Model --> Cache[(Redis Cache)]
     end
