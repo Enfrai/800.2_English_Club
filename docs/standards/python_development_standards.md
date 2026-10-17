@@ -49,7 +49,7 @@ project/
 
 - Use four spaces for indentation and UTF-8 encoding.
 - Use an 88-character formatting target. Longer lines may be retained when splitting them would reduce clarity.
-- Use Ruff formatting consistently; do not manually enforce a conflicting quote style.
+- Use `Ruff` formatting consistently; do not manually enforce a conflicting quote style.
 - Place imports at the top of the module, grouped as standard library, third-party packages, and project modules.
 - Do not use wildcard imports.
 - Use descriptive names. Avoid ambiguous names such as `data1` or `temp2` outside trivial local contexts.
